@@ -6,15 +6,21 @@ function VideoItem({ video, setSelectedVideo }) {
   return (
     <Grid item xs={12}>
       <Paper
-        style={{ display: "flex", alignItems: "center", cursor: "pointer" }}
+        style={{
+          display: "inline-block",
+          alignItems: "center",
+          cursor: "pointer",
+          width: "100%",
+        }}
         onClick={() => setSelectedVideo(video)}
       >
         <img
-          style={{ marginRight: "20px" }}
+          style={{ marginRight: "20px", float: "left" }}
+          width="50%"
           alt="thumbnail"
           src={video.snippet.thumbnails.medium.url}
         />
-        <Typography variant="subtitle1">
+        <Typography variant="subtitle1" style={{}}>
           <b>{video.snippet.title}</b>
         </Typography>
       </Paper>
