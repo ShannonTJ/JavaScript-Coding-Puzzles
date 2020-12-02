@@ -1,7 +1,7 @@
 import React from "react";
 import { Paper, Typography } from "@material-ui/core";
 
-const VideoDetail = ({ video }) => {
+function VideoDetail({ video }) {
   if (!video) return <h1>Loading...</h1>;
   const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
   return (
@@ -16,9 +16,7 @@ const VideoDetail = ({ video }) => {
         />
       </Paper>
       <Paper elevation={6} style={{ padding: "15px" }}>
-        <Typography variant="h4">
-          {video.snippet.title} - {video.snippet.channelTitle}
-        </Typography>
+        <Typography variant="h4">{video.snippet.title}</Typography>
         <Typography variant="subtitle1">
           {video.snippet.channelTitle}
         </Typography>
@@ -26,6 +24,6 @@ const VideoDetail = ({ video }) => {
       </Paper>
     </React.Fragment>
   );
-};
+}
 
 export default VideoDetail;
