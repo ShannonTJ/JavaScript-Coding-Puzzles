@@ -1,19 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import { Paper, TextField } from "@material-ui/core";
 
-function SearchBar({ onFormSubmit }) {
-  const [searchTerm, setSearchTerm] = useState("");
-
+function SearchBar({ searchTerm, setSearchTerm, onFormSubmit }) {
+  //get the value entered in the searchbar
   const handleChange = (event) => {
     setSearchTerm(event.target.value);
   };
 
+  //prevent the page from refreshing every time the user makes a search
+  //submit the search term to the api
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    // const { searchTerm } = this.state;
-    // const { onFormSubmit } = this.props;
-
     onFormSubmit(searchTerm);
   };
 

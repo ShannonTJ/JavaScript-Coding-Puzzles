@@ -2,6 +2,7 @@ import React from "react";
 import { Grid, Paper, Typography } from "@material-ui/core";
 
 function VideoItem({ video, setSelectedVideo }) {
+  //display items in the sidebar video list
   return (
     <Grid item xs={12}>
       <Paper

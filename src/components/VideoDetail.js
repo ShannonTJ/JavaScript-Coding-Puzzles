@@ -2,8 +2,11 @@ import React from "react";
 import { Paper, Typography } from "@material-ui/core";
 
 function VideoDetail({ video }) {
+  //return a loading message while retrieving videos
   if (!video) return <h1>Loading...</h1>;
+  //get the video link
   const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
+  //display the selected video
   return (
     <React.Fragment>
       <Paper elevation={6} style={{ height: "70%" }}>
