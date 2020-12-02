@@ -9,11 +9,22 @@ function VideoDetail({ video }) {
   //display the selected video
   return (
     <React.Fragment>
-      <Paper elevation={6} style={{ height: "70%" }}>
+      <Paper
+        elevation={6}
+        style={{
+          position: "relative",
+          padding: "0 0 56.25% 0",
+          width: "100%",
+          display: "block",
+        }}
+      >
         <iframe
+          style={{ position: "absolute" }}
           frameBorder="0"
-          height="100%"
           width="100%"
+          height="100%"
+          left="0"
+          top="0"
           title="Video Player"
           src={videoSrc}
         />
